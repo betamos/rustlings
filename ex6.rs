@@ -4,6 +4,7 @@
 fn main() {
     let robot_name = Some(String::from("Bors"));
 
+		let ref robot_name = robot_name;
     match robot_name {
         Some(name) => println!("Found a name: {}", name),
         None => (),

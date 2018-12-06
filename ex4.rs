@@ -2,8 +2,7 @@
 // Make me compile!
 
 fn something() -> Result<i32, std::num::ParseIntError> {
-    let x:i32 = "3".parse();
-    Ok(x * 4)
+    match "x3".parse() {Ok(x) => Ok(x * 4), err => return err}
 }
 
 fn main() {

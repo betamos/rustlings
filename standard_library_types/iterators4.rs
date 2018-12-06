@@ -1,4 +1,6 @@
-// iterators4.rs
+// iterators4.rso
+//extern crate itertools;
+//use itertools::Itertools;
 
 pub fn factorial(num: u64) -> u64 {
     // Complete this function to return factorial of num
@@ -10,6 +12,9 @@ pub fn factorial(num: u64) -> u64 {
     // For the most fun don't use:
     // - recursion
     // Scroll down for hints.
+
+    //		if num == 1 {1} else { num * factorial(num-1) } 
+		(1..num+1).product()
 }
 
 #[cfg(test)]

@@ -5,13 +5,18 @@
 // Scroll down for hints :)
 
 fn main() {
-    let mut list = vec![3];
+    let mut list = vec![3, 2];
 
     let last = list.pop().unwrap();
     println!("The last item in the list is {:?}", last);
 
-    let second_to_last = list.pop().unwrap();
-    println!("The second-to-last item in the list is {:?}", second_to_last);
+    match list.pop() {
+      Some(n) => {
+        println!("The second-to-last item in the list is {:?}", n);
+      }, None => {
+        println!("There's no last item dummy");
+      }
+		};
 }
 
 
